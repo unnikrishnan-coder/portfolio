@@ -4,7 +4,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
 const inter = Inter({ subsets: ['latin'] })
-import logo from "../public/images/logo.png";
 
 export const metadata: Metadata = {
   title: 'Unnikrishnan\'s Portfolio',
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
