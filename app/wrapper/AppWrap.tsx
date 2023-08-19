@@ -1,8 +1,9 @@
 "use client"
+import React from 'react';
 import NavigationDots from '../components/NavigationDots';
 import SocialMedia from '../components/SocialMedia';
 
-const AppWrap = (Component,idName,classNames) => function HOC(){
+const AppWrap = (Component: React.FunctionComponent,idName:string,classNames:string) => function HOC(){
   const currentYear = new Date().getFullYear()
   return (
     <div id={idName} className={`app__container ${classNames}`}>

@@ -49,7 +49,7 @@ export const data : Array<work> = [
         id: 5,
         title: "Event Management System",
         imgUrl: "/images/event2.png",
-        projectLink: null,
+        projectLink: "https://unnikrishnans-portfolio.netlify.app/",
         codeLink: "https://github.com/unnikrishnan-coder/event-management-system",
         description: "A full stack project of event management system",
         tags: ["Full Stack","HTML","CSS","Javascript","React JS","Express","MySQL"]

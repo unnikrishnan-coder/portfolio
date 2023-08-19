@@ -1,5 +1,5 @@
 "use client"
-import {useState} from 'react';
+import React, {useState} from 'react';
 import AppWrap from '../../wrapper/AppWrap';
 import MotionWrap from '../../wrapper/MotionWrap';
 import './Footer.scss';
@@ -10,25 +10,16 @@ const Footer = () => {
   const [loading,setLoading] = useState(false);
   const [submitted,setSubmitted] = useState(false);
 
-  const handleChange = (e)=>{
+  const handleChange = (e: any)=>{
     const {name,value} = e.target;
     setData((val)=>{return {...val,[name]:value}})
   };
 
-  async function handleSubmit(e){
+  function handleSubmit(e: any){
     e.preventDefault();
     setLoading(true);
-    const response = await fetch("/api/contact",{
-      method: "POST",
-      body:JSON.stringify(data)
-    }).then((res)=>{
-        setData({name:"",email:"",message:""});
-        setLoading(false);
-        setSubmitted(true);
-    }).catch((err)=>{
-      console.log(err);
-      setLoading(false);
-    });
+    setSubmitted(true);
+    setLoading(false)
   };
 
   return (
